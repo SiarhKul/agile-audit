@@ -11,13 +11,14 @@ html {
 }
 
 .indent {
-  padding-bottom: 32px;
+  margin-top: 32px;
 }
 
 /* --------------------------------HEADER */
 .body-email {
   margin: 0 auto;
-  max-width: 1000px;
+  width: 1000px;
+  border-collapse: collapse;
 }
 
 .header__img {
@@ -39,19 +40,33 @@ html {
 /* --------------------------------MAIN */
 .main {
   background-color: #fff;
+  width: 100%;
 }
 
-.contaiter {
+.container {
   margin: 0 auto;
   max-width: 760px;
+  background-color: #fff;
 }
 
 /* --------------------------------MAIN-heading */
+.main-logo {
+  background-color: #fff;
+}
+
 .heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
   padding: 32px 0;
+}
+
+.heading-data-logo {
+  text-align: right;
+  width: 50%;
+}
+
+.heading-data-img {
+  text-align: right;
+  width: 50%;
 }
 
 .heading__title {
@@ -60,16 +75,6 @@ html {
   font-size: 64px;
   white-space: nowrap;
   line-height: 60px;
-}
-
-.heading__company {
-  padding: 60px 32px 0 16px;
-  margin-left: auto;
-}
-
-.heading__img {
-  display: block;
-  max-width: 100%;
 }
 
 /* --------------------------------MAIN-results */
@@ -302,7 +307,6 @@ html {
 /* --------------------------------MAIN-articles */
 .articles {
   width: 100%;
-  margin-bottom: 30px;
 }
 
 .table-article {
@@ -329,7 +333,13 @@ html {
   height: 100%;
 }
 
-/* --------------------------------MEDIA */
-/* -----------------------------768 */
-/* ----------------------------425 */
+.table-results,
+.table-dirven-dev,
+.table-customer-centricity,
+.table-articles,
+.table-team-alignment,
+.table-cuntact-us,
+.table-companies-trust-us {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
