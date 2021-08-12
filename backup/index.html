@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base target="_top" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="google" value="notranslate" />
+		<meta name="description" content="Google's approach to email" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Agile Audit</title>
+
+		<?!= include('style'); ?>
+	</head>
+
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="stylesheet" href="./style.css" />
+			<link rel="preconnect" href="https://fonts.googleapis.com" />
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+			<link
+				href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+				rel="stylesheet"
+			/>
+			<title>Agile Audit</title>
+		</head>
+
+		<body>
+			<table class="body-email">
+				<tr class="header-row">
+					<td class="header">
+						<div class="header-wrapper-image">
+							<img
+								class="header__img"
+								src="https://i.ibb.co/rfSzRjh/header.png"
+								alt="header"
+							/>
+						</div>
+						<div class="header-wrapper-gratitude">
+							<p class="header-gratitude__text">
+								Thank you for participating in Agile Audit: Measure your Agility
+								assessment!Please, view your assessment report and improvements,
+								based on the audit results below
+							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr class="main-row-logo">
+					<td class="main-logo">
+						<table class="heading">
+							<tr class="heading-row">
+								<td class="heading-data-logo">
+									<div class="heading__logo">
+										<img src="https://i.ibb.co/wQXG7Nx/logo.png" alt="logo" />
+									</div>
+									<h1 class="heading__title">Agile Score</h1>
+								</td>
+								<td class="heading-data-img">
+									<img
+										class="heading__img"
+										src="https://i.ibb.co/YWbfTrS/company-img.png"
+										alt="company-img"
+									/>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr class="main-row">
+					<td>
+						<div class="container">
+							<table class="main">
+								<!----------------------------------- RESUTS WITH STATS -->
+								<tr>
+									<td>
+										<table class="table-results">
+											<tr class="results">
+												<td>
+													<div class="title-section">
+														<h2 class="title-section__heading">
+															<span class="title-section__highlight"
+																>Result</span
+															>
+															by focus area
+														</h2>
+														<div class="agile-score">
+															<div class="agile-score__heading">
+																Agile score
+															</div>
+															<div class="agile-score__warpper-img">
+																<img
+																	class="agile-score__img"
+																	src="https://i.ibb.co/fDQdGK6/managed.png"
+																	alt="managed"
+																/>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="results-module">
+													<div class="results-module__descriptin">
+														<h3><?=section.titleSection1?></h3>
+														<p>
+															This focus area measures how you target resources
+															and innovations.
+														</p>
+													</div>
+													<div class="results-module__status">
+														<button class="results-btn results_improve">
+															Improve
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="results-module">
+													<div class="results-module__descriptin">
+														<h3><?=section.titleSection2?></h3>
+														<p>
+															This focus area measures how you focus on
+															providing a positive customer experience to
+															enhance customer loyalty.
+														</p>
+													</div>
+													<div class="results-module__status">
+														<button class="results-btn results_managed">
+															Managed
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="results-module">
+													<div class="results-module__descriptin">
+														<h3><?=section.titleSection3?></h3>
+														<p>
+															This focus area measures how you achieve the
+															product goals by integrating the software done by
+															the development team, building executables, and
+															running on those executables to detect problems.
+														</p>
+													</div>
+													<div class="results-module__status">
+														<button class="results-btn results_improve">
+															Improve
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="results-module">
+													<div class="results-module__descriptin">
+														<h3><?=section.titleSection4?></h3>
+														<p>
+															This focus area measures how daily routine helps
+															your team to be aligned to the product goals.
+														</p>
+													</div>
+													<div class="results-module__status">
+														<button class="results-btn results_emerging">
+															Emerging
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="results-module">
+													<div class="results-module__descriptin">
+														<h3><?=section.titleSection5?></h3>
+														<p>
+															This focus area measures how you take care of your
+															customers
+														</p>
+													</div>
+													<div class="results-module__status">
+														<button class="results-btn results_emerging">
+															Emerging
+														</button>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!------------------------------------1.VALUE DRIVEN DEV -->
+								<tr>
+									<td>
+										<table class="table-dirven-dev">
+											<tr>
+												<td class="dirven-dev">
+													<div class="title-section indent">
+														<h2 class="title-section__heading">
+															<!-- <span class="title-section__highlight">Value</span>
+														Driven Development -->
+															<?=section.titleSection1?>
+														</h2>
+													</div>
+													<div class="results-area-description">
+														<p>
+															<?=description.descriptionsSection1?>
+														</p>
+													</div>
+													<h3 class="table-heading">
+														Improve
+														<?=section.titleSection1?>:
+													</h3>
+													<table class="table">
+														<tr class="table-row-heading">
+															<th class="table-row-heading__suggestion">
+																Suggested improvements
+															</th>
+															<th class="table-row-heading__skills">
+																Needed Skills
+															</th>
+															<th class="table-row-heading__duration">
+																Duration
+															</th>
+															<th class="table-row-heading__budget">
+																Expected Budget
+															</th>
+														</tr>
+														<tr>
+															<td>
+																ntroduce new product functionality by A\B
+																testing
+															</td>
+															<td>Agile Coach Business Analyst</td>
+															<td class="table-data-duration">1 month</td>
+															<td class="table-data-budget">$12000 - 15000</td>
+														</tr>
+														<tr>
+															<td>Collect and analyse user's logs</td>
+															<td>DevOps Developer Business Analyst</td>
+															<td class="table-data-duration">2 months</td>
+															<td class="table-data-budget">$12000 - 15000</td>
+														</tr>
+														<tr>
+															<td>
+																Make a UX research to understand which features
+																require further improvements
+															</td>
+															<td>UI\UX Expert Developer</td>
+															<td class="table-data-duration">2 months</td>
+															<td class="table-data-budget">$12000 - 15000</td>
+														</tr>
+														<tr>
+															<td>
+																Use Google Analytics to evaluate the usage of
+																new features, find features that are used rarely
+																or not used
+															</td>
+															<td>Agile Coach Business Analyst</td>
+															<td class="table-data-duration">1 month</td>
+															<td class="table-data-budget">$12000 - 15000</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!----------------------------------- ARTICLES-SECTION-1 -->
+								<?!= include('articles-section-1'); ?>
+								<!----------------------------------- 2.CUSTOMER-CENTRICITY -->
+								<tr>
+									<td>
+										<table class="table-customer-centricity">
+											<tr>
+												<td class="customer-centricity indent">
+													<div class="title-section indent">
+														<h2 class="title-section__heading">
+															<!-- <span class="title-section__highlight"
+															>Customer</span
+														>
+														Centricity -->
+															<?=section.titleSection2?>
+														</h2>
+													</div>
+													<div class="results-area-description">
+														<p>
+															<?=description.descriptionsSection2?>
+														</p>
+													</div>
+													<h3 class="table-heading">
+														Improve
+														<?=section.titleSection2?>:
+													</h3>
+													<table class="table">
+														<tr class="table-row-heading">
+															<th class="table-row-heading__suggestion">
+																Suggested improvements
+															</th>
+															<th class="table-row-heading__skills">
+																Needed Skills
+															</th>
+															<th class="table-row-heading__duration">
+																Duration
+															</th>
+															<th class="table-row-heading__budget">
+																Expected Budget
+															</th>
+														</tr>
+														<tr>
+															<td>Increase code quality</td>
+															<td>Architect Developers DevOps</td>
+															<td class="table-data-duration">1 month</td>
+															<td class="table-data-budget">$12000 - 15000</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!----------------------------------- ARTICLES-SECTION-2 -->
+								<?!= include('articles-section-2'); ?>
+								<!----------------------------------- 3.CUSTOMER-CONTINUOS DELIVERY -->
+								<tr>
+									<td>
+										<table class="table-customer-continuous-delivery">
+											<tr>
+												<td class="continuous delivery">
+													<div class="title-section indent">
+														<h2 class="title-section__heading">
+															<!-- <span class="title-section__highlight"
+															>Continuous</span
+														>
+														Delivery -->
+															<?=section.titleSection3?>
+														</h2>
+													</div>
+													<div class="results-area-description">
+														<p>
+															<?=description.descriptionsSection3?>
+														</p>
+													</div>
+													<h3 class="table-heading">
+														Improve
+														<?=section.titleSection3?>:
+													</h3>
+													<table class="table">
+														<tr class="table-row-heading">
+															<th class="table-row-heading__suggestion">
+																Suggested improvements
+															</th>
+															<th class="table-row-heading__skills">
+																Needed Skills
+															</th>
+															<th class="table-row-heading__duration">
+																Duration
+															</th>
+															<th class="table-row-heading__budget">
+																Expected Budget
+															</th>
+														</tr>
+														<tr>
+															<td>Increase code quality</td>
+															<td>Architect Developers DevOps</td>
+															<td class="table-data-duration">1 month</td>
+															<td class="table-data-budget">$12000 - 15000</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!----------------------------------- ARTICLES-SECTION-3 -->
+								<?!= include('articles-section-3'); ?>
+								<!----------------------------------- 4.TEAM-ALIGNMENT -->
+								<tr>
+									<td>
+										<table class="table-team-alignment">
+											<tr>
+												<td class="team-alignment">
+													<div class="title-section indent">
+														<h2 class="title-section__heading">
+															<?=section.titleSection4?>
+														</h2>
+													</div>
+													<div class="results-area-description">
+														<p>
+															<?=description.descriptionsSection4?>
+														</p>
+													</div>
+													<h3 class="table-heading">
+														Improve
+														<?=section.titleSection4?>:
+													</h3>
+													<table class="table">
+														<tr class="table-row-heading">
+															<th class="table-row-heading__suggestion">
+																Suggested improvements
+															</th>
+															<th class="table-row-heading__skills">
+																Needed Skills
+															</th>
+															<th class="table-row-heading__duration">
+																Duration
+															</th>
+															<th class="table-row-heading__budget">
+																Expected Budget
+															</th>
+														</tr>
+														<tr>
+															<td>...</td>
+															<td>Agile Coach Scrum Master</td>
+															<td class="table-data-duration">2 month</td>
+															<td class="table-data-budget">$12000 - 15000</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!----------------------------------- ARTICLES-SECTION-4 -->
+								<?!= include('articles-section-4'); ?>
+								<!----------------------------------- 5.CUSTOMER-SERVICE-EXCELLENCE -->
+								<tr>
+									<td>
+										<table class="table-team-alignment">
+											<tr>
+												<td class="customer-service-excellence indent">
+													<div class="title-section indent">
+														<h2 class="title-section__heading">
+															<!-- <span class="title-section__highlight"
+															>Customer</span
+														>
+														Service Excellence -->
+															<?=section.titleSection5?>
+														</h2>
+													</div>
+													<div class="results-area-description">
+														<p>
+															<?=description.descriptionsSection1?>
+														</p>
+													</div>
+													<h3 class="table-heading">
+														Improve
+														<?=section.titleSection5?>:
+													</h3>
+													<table class="table">
+														<tr class="table-row-heading">
+															<th class="table-row-heading__suggestion">
+																Suggested improvements
+															</th>
+															<th class="table-row-heading__skills">
+																Needed Skills
+															</th>
+															<th class="table-row-heading__duration">
+																Duration
+															</th>
+															<th class="table-row-heading__budget">
+																Expected Budget
+															</th>
+														</tr>
+														<tr>
+															<td>...</td>
+															<td>Agile Coach Scrum Master</td>
+															<td class="table-data-duration">2 month</td>
+															<td class="table-data-budget">$12000 - 15000</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!----------------------------------- ARTICLES-SECTION-5 -->
+								<?!= include('articles-section-5'); ?>
+								<!----------------------------------- CUNTACT US -->
+								<tr>
+									<td>
+										<table class="table-cuntact-us">
+											<tr>
+												<td class="contact-us indent">
+													<p>Need help with implementing an Agile approach?</p>
+													<button type="button" class="contact-us-btn">
+														<span class="contact-us-btn__name">Contact us</span>
+														<span class="contact-us-btn__wrapper-img">
+															<img
+																class="contact-us-btn__img"
+																src="https://i.ibb.co/GxZLLcj/Vector.png"
+																alt="Vector"
+															/>
+														</span>
+													</button>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!----------------------------------- COMPANIES TRUST US -->
+								<tr>
+									<td>
+										<table class="table-companies-trust-us">
+											<tr>
+												<td class="companies-trust-us">
+													<div class="title-section indent">
+														<h2 class="title-section__heading">
+															<span class="title-section__highlight"
+																>Companies that put their
+															</span>
+															trust us
+														</h2>
+													</div>
+													<div class="table-wrapper">
+														<table class="companies-trust-table">
+															<tbody>
+																<tr>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/c23hSMX/hp-logo.png"
+																			alt="hp-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/Vpks42J/ebay-logo.png"
+																			alt="ebay-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/p10v5sv/general-electric-logo.png"
+																			alt="general-electric-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/QHChTRQ/google-logo.png"
+																			alt="google-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/6m0q5g3/northwell-health-logo.png"
+																			alt="northwell-health-logo"
+																		/>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/YW1czWp/mc-logo.png"
+																			alt="mc-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/kh18cJF/ghx-logo.png"
+																			alt="ghx-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/QdxZcmv/wolters-kluwer-logo.png"
+																			alt="wolters-kluwer-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/yy8Wc0t/deloitte-logo.png"
+																			alt="deloitte-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/Pc3z4MZ/berkeley-logo.png"
+																			alt="berkeley-logo"
+																		/>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/Yd90Xf8/att-logo.png"
+																			alt="att-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/Pm6rcfT/ubs-logo.png"
+																			alt="ubs-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/hKnkrzZ/nielsen-logo.png"
+																			alt="nielsen-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/Fn5MRwY/adobo-logo.png"
+																			alt="adobo-logo"
+																		/>
+																	</td>
+																	<td>
+																		<img
+																			src="https://i.ibb.co/5v7jNNJ/dbank-logo.png"
+																			alt="dbank-logo"
+																		/>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+
+				<tr class="footer-row">
+					<td class="footer">
+						<p>
+							1340 Treat Blvd. Suite 375 Walnut Creek, CA 94597 USA +1 (866)
+							304-7961
+						</p>
+						<p>
+							©
+							<?=date?>
+							Exadel, Inc.
+						</p>
+					</td>
+				</tr>
+			</table>
+			<script src="script.js"></script>
+		</body>
+	</html>
+</html>
