@@ -30,3 +30,23 @@ const createDescriptionSection = descriptions => {
 const currentYear = () => {
 	return new Date().getFullYear();
 };
+
+//----------------------------- проверяем есть ли неподходящие ответы на вопросы и возвращаем true или false
+const checkCorrectAnswer = (responses, numerSection, noCorrectAnswers) => {
+	const regexp = new RegExp(`^${numerSection}.\\d`, "i");
+
+	const answersQuestions = responses.filter(response => {
+		const nameQuestion = response.getItem().getTitle();
+		const includesQuestionNumberSection = regexp.test(nameQuestion);
+		if (includesQuestionNumberSection) {
+			return response;
+		}
+	});
+
+	const hasInCorrectAnswer = answersQuestions.some(response => {
+		const answerToQuestion = response.getResponse()[0];
+		return noCorrectAnswers.includes(answerToQuestion);
+	});
+
+	return hasInCorrectAnswer;
+};

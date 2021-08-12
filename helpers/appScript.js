@@ -158,3 +158,16 @@
 //   }
 //   return `<ol>${str}</ol>`
 // }
+
+// console.log(answerToQuestion)
+// return answerToQuestion === "Neither agree or not disagree" || answerToQuestion === "Agree"
+// })
+// responses.forEach(response => {
+//   const nameQuestion = response.getItem().getTitle()
+//   const answerToQuestion = response.getResponse()
+//   if (regexp.test(nameQuestion)) {
+//     // console.log(answerToQuestion[0]==="N\\A",answerToQuestion[0])
+//     isAnserCorrect = ['N\A', '1 week'].includes(answerToQuestion[0])
+
+//   }
+// })

@@ -14,7 +14,7 @@
 		/>
 		<title>Agile Audit</title>
 
-		<?!= include('style'); ?>
+		<?!= include('style')?>
 	</head>
 
 	<!DOCTYPE html>
@@ -202,8 +202,6 @@
 												<td class="dirven-dev">
 													<div class="title-section indent">
 														<h2 class="title-section__heading">
-															<!-- <span class="title-section__highlight">Value</span>
-														Driven Development -->
 															<?=section.titleSection1?>
 														</h2>
 													</div>
@@ -212,60 +210,91 @@
 															<?=description.descriptionsSection1?>
 														</p>
 													</div>
+
+													<h1><?=hasInCorrectAnswerSection1?></h1>
+
+													<? if (hasInCorrectAnswerSection1) { ?>
 													<h3 class="table-heading">
 														Improve
 														<?=section.titleSection1?>:
 													</h3>
-													<table class="table">
-														<tr class="table-row-heading">
-															<th class="table-row-heading__suggestion">
-																Suggested improvements
-															</th>
-															<th class="table-row-heading__skills">
-																Needed Skills
-															</th>
-															<th class="table-row-heading__duration">
-																Duration
-															</th>
-															<th class="table-row-heading__budget">
-																Expected Budget
-															</th>
-														</tr>
-														<tr>
-															<td>
-																ntroduce new product functionality by A\B
-																testing
-															</td>
-															<td>Agile Coach Business Analyst</td>
-															<td class="table-data-duration">1 month</td>
-															<td class="table-data-budget">$12000 - 15000</td>
-														</tr>
-														<tr>
-															<td>Collect and analyse user's logs</td>
-															<td>DevOps Developer Business Analyst</td>
-															<td class="table-data-duration">2 months</td>
-															<td class="table-data-budget">$12000 - 15000</td>
-														</tr>
-														<tr>
-															<td>
-																Make a UX research to understand which features
-																require further improvements
-															</td>
-															<td>UI\UX Expert Developer</td>
-															<td class="table-data-duration">2 months</td>
-															<td class="table-data-budget">$12000 - 15000</td>
-														</tr>
-														<tr>
-															<td>
-																Use Google Analytics to evaluate the usage of
-																new features, find features that are used rarely
-																or not used
-															</td>
-															<td>Agile Coach Business Analyst</td>
-															<td class="table-data-duration">1 month</td>
-															<td class="table-data-budget">$12000 - 15000</td>
-														</tr>
-													</table>
+													<?!= include('table-section-1')?>
+													<? } else  { ?>
+													<?!= include('messgeGreateResuts')?>
+													<? } ?>
+
+													<!-- <table class="table">
+												<tr class="table-row-heading">
+													<th class="table-row-heading__suggestion">
+														Suggested improvements
+													</th>
+													<th class="table-row-heading__skills">
+														Needed Skills
+													</th>
+													<th class="table-row-heading__duration">
+														Duration
+													</th>
+													<th class="table-row-heading__budget">
+														Expected Budget
+													</th>
+												</tr>
+												<tr>
+													<td>
+														Adopt data-driven decision making process and strategy alignment approach as a part your company culture.
+													</td>
+													<td>Agile Coach</td>
+													<td class="table-data-duration">3 months</td>
+													<td class="table-data-budget">$32 000</td>
+												</tr>
+												<tr>
+													<td>Improve your plan-do-check-act cycles with precise metrics.</td>
+													<td>Agile Coach <br/>Business Analyst</td>
+													<td class="table-data-duration">2 months</td>
+													<td class="table-data-budget">$38 000</td>
+												</tr>
+												<tr>
+													<td>
+														Automate the feedback loop to collect user's feedback within 1 week after releasing new/updated features.
+													</td>
+													<td>Agile Coach<br/>Business Analyst<br/>Developer<br/>DevOps</td>
+													<td class="table-data-duration">3 months</td>
+													<td class="table-data-budget">$110 000</td>
+												</tr>
+												<tr>
+													<td>
+														Introduce new product functionality by A\B testing.
+													</td>
+													<td>Business Analyst<br/>Developer</td>
+													<td class="table-data-duration">1 month</td>
+													<td class="table-data-budget">$17 000</td>
+												</tr>
+												<tr>
+													<td>
+														Make a UX research to understand the user's needs and validate design direction.
+													</td>
+													<td>UI\UX Expert<br/>Business Analyst<br/>Developer</td>
+													<td class="table-data-duration">2 months</td>
+													<td class="table-data-budget">$50 000</td>
+												</tr>
+												<tr>
+													<td>
+														Provides visibility up, down and across the reporting levels to improve the decision making and reduce a number of corrections.
+													</td>
+													<td>Agile Coach</td>
+													<td class="table-data-duration">1 month</td>
+													<td class="table-data-budget">$10 500</td>
+												</tr>
+												<tr>
+													<td>
+														Increase employee understanding and alignment on strategic goals.
+													</td>
+													<td>Agile Coach</td>
+													<td class="table-data-duration">1 month</td>
+													<td class="table-data-budget">$10 500</td>
+												</tr>
+											</table>
+                      
+                       -->
 												</td>
 											</tr>
 										</table>
@@ -313,10 +342,52 @@
 															</th>
 														</tr>
 														<tr>
-															<td>Increase code quality</td>
-															<td>Architect Developers DevOps</td>
+															<td>
+																Align your teams around the customer value to
+																improve return of investments rate.
+															</td>
+															<td>Agile Coach<br />Business Analyst</td>
+															<td class="table-data-duration">2 months</td>
+															<td class="table-data-budget">$38 000</td>
+														</tr>
+														<tr>
+															<td>
+																Conduct workshops for better understanding the
+																customer needs and ways how to improve users'
+																loyalty.
+															</td>
+															<td>Agile Coach<br />Business Analyst</td>
 															<td class="table-data-duration">1 month</td>
-															<td class="table-data-budget">$12000 - 15000</td>
+															<td class="table-data-budget">$19 000</td>
+														</tr>
+														<tr>
+															<td>
+																Improve customer experience by customer journey
+																maps and empathy maps.
+															</td>
+															<td>Agile Coach<br />Business Analyst</td>
+															<td class="table-data-duration">1 month</td>
+															<td class="table-data-budget">$19 000</td>
+														</tr>
+														<tr>
+															<td>
+																Reduce customer journey frustrations by creating
+																better customer experience
+															</td>
+															<td>
+																UI\UX Expert<br />Business Analyst<br />Developer
+															</td>
+															<td class="table-data-duration">2 months</td>
+															<td class="table-data-budget">$50 000</td>
+														</tr>
+														<tr>
+															<td>
+																Use analytics to evaluate the feature usage to
+																find features that are used rarely.
+															</td>
+															<td>Business Analyst<br />Developer</td>
+															<td class="table-data-duration">3 months</td>
+															<td class="table-data-budget">$52 000</td>
 														</tr>
 													</table>
 												</td>
@@ -366,10 +437,46 @@
 															</th>
 														</tr>
 														<tr>
-															<td>Increase code quality</td>
-															<td>Architect Developers DevOps</td>
+															<td>
+																Enhance delivery pipeline transparency by
+																reports generated for build failures, code
+																integration problems, architectural bottlenecks.
+															</td>
+															<td>
+																Agile Coach<br />Automation QA<br />DevOps
+															</td>
 															<td class="table-data-duration">1 month</td>
-															<td class="table-data-budget">$12000 - 15000</td>
+															<td class="table-data-budget">$28 000</td>
+														</tr>
+														<tr>
+															<td>Accelerate release cycles</td>
+															<td>
+																Agile Coach<br />Solution Architect<br />Release
+																Manager<br />Business Analyst<br />Developers<br />DevOps<br />Automation
+																QA
+															</td>
+															<td class="table-data-duration">1.5 months</td>
+															<td class="table-data-budget">$101 000</td>
+														</tr>
+														<tr>
+															<td>
+																Increase code quality to make more predictable
+																and stable delivery.
+															</td>
+															<td>
+																Solution Architect<br />Developer<br />DevOps
+															</td>
+															<td class="table-data-duration">3 months</td>
+															<td class="table-data-budget">$88 000</td>
+														</tr>
+														<tr>
+															<td>Enhance test reliability.</td>
+															<td>
+																Solution Architect<br />Business Analyst<br />Automation
+																QA<br />DevOps
+															</td>
+															<td class="table-data-duration">1,5 months</td>
+															<td class="table-data-budget">$53 000</td>
 														</tr>
 													</table>
 												</td>
@@ -415,10 +522,32 @@
 															</th>
 														</tr>
 														<tr>
-															<td>...</td>
-															<td>Agile Coach Scrum Master</td>
-															<td class="table-data-duration">2 month</td>
-															<td class="table-data-budget">$12000 - 15000</td>
+															<td>
+																Create a backlog management approach and
+																prioritization approach to eliminate waste in
+																value delivery
+															</td>
+															<td>Agile Coach</td>
+															<td class="table-data-duration">2 weeks</td>
+															<td class="table-data-budget">$5 000</td>
+														</tr>
+														<tr>
+															<td>
+																Set up regular product increment review to
+																correct product roadmap on a users feedbacks
+																basis and focus on the most valuable features.
+															</td>
+															<td class="table-data-duration">2 weeks</td>
+															<td class="table-data-budget">$5 000</td>
+														</tr>
+														<tr>
+															<td>
+																Set up retrospective meeting on regular basis to
+																leverage a culture of continuous improvements.
+															</td>
+															<td>Agile Coach</td>
+															<td class="table-data-duration">1 week</td>
+															<td class="table-data-budget">$2 500</td>
 														</tr>
 													</table>
 												</td>
@@ -468,10 +597,49 @@
 															</th>
 														</tr>
 														<tr>
-															<td>...</td>
-															<td>Agile Coach Scrum Master</td>
-															<td class="table-data-duration">2 month</td>
-															<td class="table-data-budget">$12000 - 15000</td>
+															<td>
+																Reduce average response time by contextual and
+																personalized response automation.
+															</td>
+															<td>Business Analyst<br />Developer</td>
+															<td class="table-data-duration">1 month</td>
+															<td class="table-data-budget">$35 000</td>
+														</tr>
+														<tr>
+															<td>
+																Streamline the ticket routing by technology
+																usage.
+															</td>
+															<td>Agile Coach<br />Support Team Manager</td>
+															<td class="table-data-duration">1 month</td>
+															<td class="table-data-budget">$19 000</td>
+														</tr>
+														<tr>
+															<td>
+																Establish processes, common practices, and
+																responses for common customer problems.
+															</td>
+															<td>Support Team Manager</td>
+															<td class="table-data-duration">2 months</td>
+															<td class="table-data-budget">$17 500</td>
+														</tr>
+														<tr>
+															<td>
+																Analyze metrics and find the root cause for
+																unsuccessful scores.
+															</td>
+															<td>Agile Coach<br />Support Team Manager</td>
+															<td class="table-data-duration">2 months</td>
+															<td class="table-data-budget">$39 000</td>
+														</tr>
+														<tr>
+															<td>
+																Use Support Tools That Contextualize Customer
+																Profiles and Problems
+															</td>
+															<td>Support Team Manager</td>
+															<td class="table-data-duration">2 months</td>
+															<td class="table-data-budget">$17 500</td>
 														</tr>
 													</table>
 												</td>

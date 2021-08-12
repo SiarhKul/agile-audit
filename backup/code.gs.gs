@@ -2,27 +2,18 @@ function onSubmit() {
 	const existingForm = FormApp.openById(
 		"1uesbmoaUO6iaklFZU4H5yowQJrphmCYjgQtvR9I1o_o"
 	);
-	const formResponses = existingForm.getResponses();
-	const formResponse = formResponses[formResponses.length - 1];
-	const itemResponses = formResponse.getItemResponses();
-	const itemResponse = itemResponses[3];
-
-	const emailRespondent = itemResponse.getResponse();
-	console.log(emailRespondent);
-
 	const section = existingForm.getItems(FormApp.ItemType.PAGE_BREAK);
-
-	//   const getEmail = itemResponses => {
-	//     // itemResponses.forEach(elem => console.log(elem.getResponse()))
-	//  itemResponses.find(elem => {return elem.includes("@")})
-	//   }
-
-	// const getEmail = itemResponses => {
-	// 	return itemResponses.find(elem => {
-	// 		return elem.includes("@");
-	// 	});
-	// };
-	// console.log(getEmail(itemResponses))
+	// получение всех ответов всех респондентов
+	const formResponses = existingForm.getResponses();
+	// получение последнего массива ответов респондента
+	const formResponse = formResponses[formResponses.length - 1];
+	// получение почты последнего респондента
+	const emailRespondent = formResponse.getRespondentEmail();
+	// получение всех ответов последнего респондента
+	const itemResponses = formResponse.getItemResponses();
+	// получнеие конкретного ответ из массива ответов последнего респондента
+	// const itemResponse = itemResponses[0]
+	console.log("на эту почту отправлено сообщение -", emailRespondent);
 
 	const htmlTemplate = HtmlService.createTemplateFromFile("index");
 	// передаем все названия секций в html шаблон
@@ -32,12 +23,25 @@ function onSubmit() {
 	// передаем дату footer в html шаблон
 	htmlTemplate.date = currentYear();
 
-	const htmlForEmail = htmlTemplate.evaluate().getContent();
-	const theme = "Test mini app-Agile Audit";
-	// ОТПРАВКА ПИСЬМА
-	// MailApp.sendEmail({
-	//   to: emailRespondent,
-	//   subject: theme,
-	//   htmlBody: htmlForEmail
-	// })
+	htmlTemplate.hasInCorrectAnswerSection1 = checkCorrectAnswer(
+		itemResponses,
+		1,
+		noCorrectAnswersSection1
+	);
+	htmlTemplate.hasInCorrectAnswerSection2 = checkCorrectAnswer(
+		itemResponses,
+		2,
+		noCorrectAnswersSection2
+	);
+
+	//------------------------------------------------------- ОТПРАВКА ПИСЬМА
+	//для проверики или тестов в поле to: нужно написать, почту на которую хотите отпраить сообщение
+	//в противном случае сообщения будут приходить на почту последнего респондента.
+	const emailContent = htmlTemplate.evaluate().getContent();
+	const emailTheme = "Test mini app-Agile Audit";
+	MailApp.sendEmail({
+		to: emailRespondent,
+		subject: emailTheme,
+		htmlBody: emailContent,
+	});
 }
