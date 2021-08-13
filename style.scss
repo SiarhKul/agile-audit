@@ -24,6 +24,11 @@ html {
 	margin-top: 32px;
 }
 
+.message-great-results {
+	background-color: $blue-light;
+	padding: 16px;
+}
+
 /* --------------------------------HEADER */
 .body-email {
 	margin: 0 auto;
@@ -89,11 +94,19 @@ html {
 }
 
 /* --------------------------------MAIN-results */
+.table-results {
+	border-spacing: 0 4px;
+}
+
+.table-results td {
+	background-color: $gray;
+}
+.table-data-agile-score {
+	width: 200px;
+}
 
 .agile-score {
 	display: flex;
-	margin-left: auto;
-	margin-right: 24px;
 }
 
 .agile-score__heading {
@@ -131,10 +144,6 @@ html {
 .results-module {
 	display: flex;
 	align-items: center;
-}
-
-.results-module {
-	margin-top: 8px;
 	padding: 24px;
 	background-color: $gray;
 }
@@ -146,6 +155,7 @@ html {
 
 .results-module__status {
 	margin-left: auto;
+	// width: 150px;
 }
 
 .results-btn {
@@ -325,6 +335,7 @@ html {
 	width: 100%;
 	height: 100%;
 }
+.table-logo,
 .table-results,
 .table-dirven-dev,
 .table-customer-centricity,
