@@ -142,7 +142,6 @@ html {
 }
 
 .results-module {
-	display: flex;
 	align-items: center;
 	padding: 24px;
 	background-color: $gray;
@@ -153,24 +152,25 @@ html {
 	color: $blue;
 }
 
-.results-module__status {
-	margin-left: auto;
-	// width: 150px;
+.results-status {
+	width: 150px;
 }
 
 .results-btn {
-	width: 105px;
+	display: block;
+	width: 130px;
+	text-align: center;
 }
 
-.results-module__status button {
+.results-module__status span {
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 0 16px;
 	padding: 8px 16px;
 	border: none;
 	border-radius: 18px;
-	word-break: keep-all;
 }
+
 .title-section {
 	display: flex;
 }

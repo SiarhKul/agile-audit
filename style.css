@@ -141,9 +141,6 @@ html {
 }
 
 .results-module {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -156,22 +153,23 @@ html {
   color: #0082ca;
 }
 
-.results-module__status {
-  margin-left: auto;
+.results-status {
+  width: 150px;
 }
 
 .results-btn {
-  width: 105px;
+  display: block;
+  width: 130px;
+  text-align: center;
 }
 
-.results-module__status button {
+.results-module__status span {
   text-transform: uppercase;
   font-weight: bold;
   margin: 0 16px;
   padding: 8px 16px;
   border: none;
   border-radius: 18px;
-  word-break: keep-all;
 }
 
 .title-section {
