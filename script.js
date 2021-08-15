@@ -38,9 +38,9 @@ const getEmail = arrStr => {
 const statutsSections = {
 	determinatedStatusSection1: "green",
 	determinatedStatusSection2: "yellow",
-	determinatedStatusSection3: "red",
+	determinatedStatusSection3: "green",
 	determinatedStatusSection4: "green",
-	determinatedStatusSection5: "yellow",
+	determinatedStatusSection5: "green",
 };
 
 const getStatus = statutsSections => {
@@ -49,8 +49,14 @@ const getStatus = statutsSections => {
 	return ["red", "yellow", "green"].find(status => {
 		return arrStatus.includes(status);
 	});
-	// return arrStatus.find(status => {
-	// 	return ["red", "yellow", "green"].includes(status);
-	// });
 };
-console.log(getStatus(statutsSections));
+
+const showPriceTable = statutsSections => {
+	const arrStatus = [...new Set(Object.values(statutsSections))];
+
+	return ["red", "yellow"].some(status => {
+		return arrStatus.includes(status);
+	});
+};
+
+console.log(showPriceTable(statutsSections));
