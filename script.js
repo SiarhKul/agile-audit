@@ -1,12 +1,14 @@
-const arrTitle = ["lorem1", "lorem2", "lorem3", "lorem4"];
+const strQuestion = "1.2 Measure Value-Driven Development";
+const str = "1. Measure Value-Driven Development";
 
-console.log("1.2 Measure Value-Driven Development".replace(/[0-9.]/g, ""));
-console.log(/^2.\d/i.test("2.2 Measure Value-Driven Development"));
+console.log(str.replace(/[0-9.]/g, ""));
+console.log(/^1.\d Measure/i.test(strQuestion));
 
-const createResponsesSection = responses => {
-	const obj = {};
-	responses.forEach((response, i) => {});
+const createTitle = str => {
+	return str.replace(/^\d. Measure /, "");
 };
+
+console.log(createTitle(str));
 
 const createTitleSection = titleSection => {
 	const obj = {};
@@ -36,11 +38,11 @@ const getEmail = arrStr => {
 };
 
 const statutsSections = {
-	determinatedStatusSection1: "green",
-	determinatedStatusSection2: "yellow",
-	determinatedStatusSection3: "green",
-	determinatedStatusSection4: "green",
-	determinatedStatusSection5: "green",
+	determinedStatusSection1: "yellow",
+	determinedStatusSection2: "green",
+	determinedStatusSection3: "green",
+	determinedStatusSection4: "red",
+	determinedStatusSection5: "yellow",
 };
 
 const getStatus = statutsSections => {
@@ -52,11 +54,15 @@ const getStatus = statutsSections => {
 };
 
 const showPriceTable = statutsSections => {
-	const arrStatus = [...new Set(Object.values(statutsSections))];
+	const arrStatus = Object.values(statutsSections); //?
 
-	return ["red", "yellow"].some(status => {
-		return arrStatus.includes(status);
+	const statusTable = arrStatus.map(status => {
+		if (status === "yellow" || status === "red") {
+			return true;
+		} else {
+			return false;
+		}
 	});
-};
 
-console.log(showPriceTable(statutsSections));
+	return statusTable;
+};
