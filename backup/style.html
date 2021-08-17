@@ -15,6 +15,11 @@
 		margin-top: 32px;
 	}
 
+	.message-great-results {
+		background-color: rgba(64, 191, 239, 0.25);
+		padding: 16px;
+	}
+
 	/* --------------------------------HEADER */
 	.body-email {
 		margin: 0 auto;
@@ -45,7 +50,7 @@
 	}
 
 	.main-row {
-		background-color: $white;
+		background-color: #fff;
 	}
 
 	.container {
@@ -83,12 +88,22 @@
 	}
 
 	/* --------------------------------MAIN-results */
+	.table-results {
+		border-spacing: 0 4px;
+	}
+
+	.table-results td {
+		background-color: #e4ebef48;
+	}
+
+	.table-data-agile-score {
+		width: 200px;
+	}
+
 	.agile-score {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		margin-left: auto;
-		margin-right: 24px;
 	}
 
 	.agile-score__heading {
@@ -127,16 +142,9 @@
 	}
 
 	.results-module {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
-	}
-
-	.results-module {
-		margin-top: 8px;
 		padding: 24px;
 		background-color: #e4ebef48;
 	}
@@ -146,22 +154,23 @@
 		color: #0082ca;
 	}
 
-	.results-module__status {
-		margin-left: auto;
+	.results-status {
+		width: 150px;
 	}
 
 	.results-btn {
-		width: 105px;
+		display: block;
+		width: 130px;
+		text-align: center;
 	}
 
-	.results-module__status button {
+	.results-module__status span {
 		text-transform: uppercase;
 		font-weight: bold;
 		margin: 0 16px;
 		padding: 8px 16px;
 		border: none;
 		border-radius: 18px;
-		word-break: keep-all;
 	}
 
 	.title-section {
@@ -191,7 +200,7 @@
 		font-size: 20px;
 		font-weight: bold;
 		line-height: 30px;
-		margin-bottom: 16px;
+		margin: 16px 0;
 	}
 
 	.table {
@@ -248,18 +257,7 @@
 	.contact-us-btn {
 		background: none;
 		border: none;
-		color: #fff;
 		font-size: 0;
-	}
-
-	.contact-us-btn__name {
-		-webkit-transition: all 0.3s ease-in;
-		transition: all 0.3s ease-in;
-		cursor: pointer;
-	}
-
-	.contact-us-btn__name:hover {
-		color: #e4ebef48;
 	}
 
 	.contact-us-btn__name {
@@ -269,36 +267,56 @@
 		line-height: 30px;
 	}
 
+	.contact-us-btn__link {
+		color: #fff;
+		-webkit-transition: all 0.3s ease-in;
+		transition: all 0.3s ease-in;
+		text-decoration: none;
+	}
+
+	.contact-us-btn__link:hover {
+		color: #0082ca;
+	}
+
 	/* --------------------------------MAIN-contact-us */
-	.companies-trust {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-	}
-
-	.company-wrapper-img {
-		min-width: 120px;
-	}
-
-	.company-wrapper-img img {
-		display: block;
-		max-width: 100%;
-	}
-
-	.table-wrapper {
-		padding: 60px 0;
-		overflow-x: auto;
-	}
-
-	.companies-trust-table {
+	.contact-us {
+		padding: 24px;
 		width: 100%;
-		border-collapse: collapse;
-		border-spacing: 0;
-		margin: 0px auto;
+		height: 170px;
+		background-image: url("https://i.ibb.co/xf6tTXT/contact-us-img.png");
+		margin-bottom: 60px;
 	}
 
-	.companies-trust-table td {
-		width: 20%;
+	.contact-us p {
+		max-width: 500px;
+		color: #fff;
+		font-size: 28px;
+		font-weight: 800;
+		margin-bottom: 10px;
+	}
+
+	.contact-us-btn {
+		background: none;
+		border: none;
+		font-size: 0;
+	}
+
+	.contact-us-btn .contact-us-btn__name .contact-us-btn__link {
+		color: #fff;
+		-webkit-transition: all 0.3s ease-in;
+		transition: all 0.3s ease-in;
+		text-decoration: none;
+	}
+
+	.contact-us-btn__name {
+		font-size: 20px;
+		font-weight: 400;
+		padding-right: 8px;
+		line-height: 30px;
+	}
+
+	.contact-us-btn .contact-us-btn__name .contact-us-btn__link:hover {
+		color: #0082ca;
 	}
 
 	/* --------------------------------MAIN-footer-us */
@@ -338,6 +356,7 @@
 		height: 100%;
 	}
 
+	.table-logo,
 	.table-results,
 	.table-dirven-dev,
 	.table-customer-centricity,

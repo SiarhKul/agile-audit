@@ -251,16 +251,13 @@ html {
 .contact-us-btn {
 	background: none;
 	border: none;
-	color: $white;
 	font-size: 0;
 }
 
-.contact-us-btn__name {
+.contact-us-btn {
+	color: $white;
 	transition: all 0.3s ease-in;
-	cursor: pointer;
-}
-.contact-us-btn__name:hover {
-	color: $gray;
+	text-decoration: none;
 }
 
 .contact-us-btn__name {
@@ -270,6 +267,15 @@ html {
 	line-height: 30px;
 }
 
+.contact-us-btn__link {
+	color: $white;
+	transition: all 0.3s ease-in;
+	text-decoration: none;
+}
+
+.contact-us-btn__link:hover {
+	color: $blue;
+}
 /* --------------------------------MAIN-contact-us */
 
 .companies-trust {
@@ -302,6 +308,7 @@ html {
 /* --------------------------------MAIN-footer-us */
 
 .footer {
+	width: 100%;
 	padding: 24px 0;
 	background-color: $gray-dark;
 	text-align: center;
@@ -335,6 +342,11 @@ html {
 	width: 100%;
 	height: 100%;
 }
+
+.footer-row,
+.main-row,
+.main-row-logo,
+.header-row,
 .table-logo,
 .table-results,
 .table-dirven-dev,

@@ -11,7 +11,7 @@ const createTitleSection = sections => {
 	sections.forEach((section, i) => {
 		obj[`titleSection${i + 1}`] = section
 			.getTitle()
-			.replace(/[0-9.]/g, "")
+			.replace(/^\d. Measure /, "")
 			.trim();
 	});
 	return obj;
@@ -32,7 +32,22 @@ const currentYear = () => {
 };
 
 //----------------------------- проверяем есть ли неподходящие ответы на вопросы и возвращаем true или false
-const checkCorrectAnswer = (responses, numerSection, noCorrectAnswers) => {
+const showPriceTable = statutsSections => {
+	const arrStatus = Object.values(statutsSections);
+
+	const statusTable = arrStatus.map(status => {
+		if (status === "yellow" || status === "red") {
+			return true;
+		} else {
+			return false;
+		}
+	});
+
+	return statusTable;
+};
+
+//----------------------------- получаем ответы на определенную секцию
+const getAnswersSection = (responses, numerSection) => {
 	const regexp = new RegExp(`^${numerSection}.\\d`, "i");
 
 	const answersQuestions = responses.filter(response => {
@@ -42,11 +57,67 @@ const checkCorrectAnswer = (responses, numerSection, noCorrectAnswers) => {
 			return response;
 		}
 	});
+	return answersQuestions;
+};
 
-	const hasInCorrectAnswer = answersQuestions.some(response => {
+//------------------------------- определение статуса секции
+const determinateStatus = (answersSection, emergingAnswers, improveAnswers) => {
+	let status = null;
+
+	const statusRed = answersSection.some(response => {
 		const answerToQuestion = response.getResponse()[0];
-		return noCorrectAnswers.includes(answerToQuestion);
+		return emergingAnswers.includes(answerToQuestion);
 	});
 
-	return hasInCorrectAnswer;
+	const statusYellow = answersSection.some(response => {
+		const answerToQuestion = response.getResponse()[0];
+		return improveAnswers.includes(answerToQuestion);
+	});
+
+	if (statusRed) {
+		status = "red";
+	} else if (statusYellow) {
+		status = "yellow";
+	} else {
+		status = "green";
+	}
+	return status;
+};
+
+//------------------------------- создание объекта с ответами по каждой секции
+
+const createObjAnswersSections = (responses, section) => {
+	const obj = {};
+	section.forEach((_, i) => {
+		obj[`answersSection${i + 1}`] = getAnswersSection(responses, i + 1);
+	});
+	return obj;
+};
+
+//------------------------------- создание объекта c соответствующим статусом
+const createObjDeteminatedStatusSecton = (
+	answersSection,
+	section,
+	emergingAnswers,
+	improveAnswers
+) => {
+	const obj = {};
+	section.forEach((_, i) => {
+		const status = determinateStatus(
+			answersSection[`answersSection${i + 1}`],
+			emergingAnswers,
+			improveAnswers
+		);
+
+		obj[`determinedStatusSection${i + 1}`] = status;
+	});
+	return obj;
+};
+
+//------------------------------- получение статуса секции
+const getStatus = statutsSections => {
+	const arrStatus = [...new Set(Object.values(statutsSections))];
+	return ["red", "yellow", "green"].find(status => {
+		return arrStatus.includes(status);
+	});
 };

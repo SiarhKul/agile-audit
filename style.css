@@ -256,18 +256,14 @@ html {
 .contact-us-btn {
   background: none;
   border: none;
-  color: #fff;
   font-size: 0;
 }
 
-.contact-us-btn__name {
+.contact-us-btn {
+  color: #fff;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  cursor: pointer;
-}
-
-.contact-us-btn__name:hover {
-  color: #e4ebef48;
+  text-decoration: none;
 }
 
 .contact-us-btn__name {
@@ -275,6 +271,17 @@ html {
   font-weight: 400;
   padding-right: 8px;
   line-height: 30px;
+}
+
+.contact-us-btn__link {
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+
+.contact-us-btn__link:hover {
+  color: #0082ca;
 }
 
 /* --------------------------------MAIN-contact-us */
@@ -311,6 +318,7 @@ html {
 
 /* --------------------------------MAIN-footer-us */
 .footer {
+  width: 100%;
   padding: 24px 0;
   background-color: #f2f2f2;
   text-align: center;
@@ -346,6 +354,10 @@ html {
   height: 100%;
 }
 
+.footer-row,
+.main-row,
+.main-row-logo,
+.header-row,
 .table-logo,
 .table-results,
 .table-dirven-dev,
